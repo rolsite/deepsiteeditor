@@ -2,6 +2,8 @@
 
 A powerful web-based tool for creating and editing websites using AI capabilities through the OpenRouter API.
 
+*Leia isso em outros idiomas: [Português Brasileiro](README.pt-br.md)*
+
 🌐 **Live Demo**: [https://rolsite.github.io/deepsiteeditor](https://rolsite.github.io/deepsiteeditor)
 
 ## ⭐ Credits
