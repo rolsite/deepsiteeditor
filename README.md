@@ -1,0 +1,181 @@
+# Deep Site Editor 🚀
+
+A powerful web-based tool for streaming and processing HTML content using AI capabilities. This application allows you to analyze and modify web content efficiently using advanced language models through the OpenRouter API.
+
+## ⭐ Credits
+
+This project is based on [Deepsite by enzostvs](https://huggingface.co/spaces/enzostvs/deepsite), available on Hugging Face Spaces. We appreciate their original work and contribution to the open-source community.
+
+## ⚠️ Security Disclaimer
+
+**IMPORTANT**: During testing, antivirus software has flagged potential security concerns with the original Deepsite implementation. These alerts suggest that some scripts might reference files hosted on potentially compromised servers. While we've taken steps to enhance security in this implementation, users should:
+
+- Run the application in a controlled environment
+- Keep their antivirus software active
+- Monitor for any suspicious activity
+- Use at their own discretion and risk
+
+## 🌟 Features
+
+- Real-time HTML content streaming and processing
+- Integration with OpenRouter API for AI capabilities
+- User-friendly interface with configuration options
+- System prompt customization
+- Efficient content handling and display
+- Natural language code editing - request changes to your generated code using simple English prompts
+- Interactive code modifications within the model's context window
+
+## 📋 Prerequisites
+
+- Modern web browser (Chrome, Firefox, Safari, or Edge)
+- OpenRouter API key
+- Local development server (like Live Server VS Code extension or any HTTP server)
+
+## 🔑 Getting an OpenRouter API Key
+
+1. Visit [OpenRouter](https://openrouter.ai/)
+2. Sign up for an account or log in if you already have one
+3. Navigate to the API Keys section in your dashboard
+4. Click on "Create New Key"
+5. Copy your API key and keep it secure
+
+## 🚀 Quick Start
+
+1. Clone this repository to your local machine
+2. Set up a local development server (see options above)
+3. Open the application through the server URL
+4. Click on the configuration icon (⚙️) to open the settings modal
+5. Enter your OpenRouter API key in the configuration modal
+6. Configure any additional settings as needed
+7. Start using the application!
+
+## 💻 Usage Instructions
+
+### Basic Operation
+
+1. **Initial Setup**:
+   - Configure your API key through the settings modal
+   - Customize the system prompt if needed
+
+2. **Processing Content**:
+   - Enter or paste your HTML content into the input area
+   - The application will process and display the content in real-time
+
+3. **Natural Language Code Editing**:
+   - Once your initial code is generated, you can request changes using natural language
+   - Simply describe what you want to modify in plain English
+   - The AI will understand and implement your requested changes
+   - Continue the conversation to refine the code further
+   - Note: Changes are limited to the context window of the AI model being used
+
+### Advanced Features
+
+- **Content Streaming**: The application processes content in chunks for optimal performance
+- **Error Handling**: Built-in error detection and reporting for API issues
+- **Configuration Options**: Customize the behavior through the settings modal
+
+## ⚙️ Configuration Options
+
+The settings modal allows you to configure:
+- OpenRouter API Key
+- System prompts
+- Other processing parameters
+
+## 🔒 Security
+
+- API keys are stored securely in your browser's local storage
+- No sensitive data is transmitted to third parties
+- All API communications are encrypted
+
+## 🛠️ Troubleshooting
+
+Common issues and solutions:
+
+1. **Authentication Errors**:
+   - Verify your API key is correct
+   - Ensure the key is properly entered in the configuration
+   - Check if your API key has sufficient credits
+
+2. **Content Display Issues**:
+   - Clear your browser cache
+   - Refresh the page
+   - Check for any console errors
+
+## 📝 Notes
+
+- The application processes HTML content in real-time
+- Response times may vary based on content length and API response speed
+- Keep your API key secure and never share it publicly
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+For additional support or questions, please open an issue in the repository.
+
+## ⚠️ Important Note About Running the Application
+
+The application **cannot** be run by simply opening the `index.html` file directly in a browser. This is due to:
+- Browser security restrictions (CORS policy)
+- ES6 module loading requirements
+- Local file access limitations
+
+Instead, you must use a local development server. Here are some options:
+
+1. **Using VS Code (Recommended)**:
+   - Install the "Live Server" extension
+   - Right-click on `index.html`
+   - Select "Open with Live Server"
+
+2. **Using Python**:
+   - Open terminal in project directory
+   - Python 3: `python -m http.server 8080`
+   - Visit `http://localhost:8080`
+
+3. **Using Node.js**:
+   - Install `http-server` globally: `npm install -g http-server`
+   - Run: `http-server`
+   - Visit the URL shown in terminal
+
+## 🌐 Deploying to GitHub Pages
+
+You can host this application for free using GitHub Pages. Here's how:
+
+1. **Create a GitHub Repository**:
+   - Go to [GitHub](https://github.com)
+   - Click on "New repository"
+   - Name your repository `deepsiteeditor`
+   - Make it public
+   - Don't initialize with any files
+
+2. **Push Your Code**:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/deepsiteeditor.git
+   git push -u origin main
+   ```
+
+3. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Click "Settings"
+   - Scroll to "GitHub Pages" section
+   - Under "Source", select "main" branch
+   - Click "Save"
+   - Wait a few minutes for deployment
+
+4. **Access Your Site**:
+   - Your site will be available at: `https://YOUR_USERNAME.github.io/deepsiteeditor`
+   - The URL will be shown in the GitHub Pages section
+
+**Note**: Make sure your OpenRouter API key is kept secure and not committed to the repository. Users of your deployed site will need to provide their own API keys. 
