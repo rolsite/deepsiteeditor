@@ -230,4 +230,50 @@ To sync with the original repository:
    git push origin main
    ```
 
-**Note**: Remember to never commit your API keys or sensitive information to the repository. 
+**Note**: Remember to never commit your API keys or sensitive information to the repository.
+
+## 🔒 Known Issues and Solutions
+
+### CORS Issues on GitHub Pages
+
+When deploying to GitHub Pages, you might encounter CORS (Cross-Origin Resource Sharing) errors when trying to access the OpenRouter API. This happens because GitHub Pages enforces strict security policies. To fix this, you have several options:
+
+1. **Use a CORS Proxy (Recommended for Testing)**
+   - Update the API URL in the code to use a CORS proxy
+   - Example using cors-anywhere:
+     ```javascript
+     const url = 'https://cors-anywhere.herokuapp.com/https://openrouter.ai/api/v1/chat/completions';
+     ```
+   - Note: For production, set up your own proxy server
+
+2. **Set Up Your Own Backend (Recommended for Production)**
+   - Create a simple backend service (Node.js, Python, etc.)
+   - Route API requests through your backend
+   - Deploy to platforms like:
+     - Vercel
+     - Netlify
+     - Heroku
+     - Azure Functions
+     - AWS Lambda
+
+3. **Configure OpenRouter Headers**
+   - Make sure your request includes the correct headers:
+     ```javascript
+     headers: {
+       'Content-Type': 'application/json',
+       'Authorization': `Bearer ${apiKey}`,
+       'HTTP-Referer': 'https://YOUR_USERNAME.github.io/deepsiteeditor',
+       'X-Title': 'DeepSiteEditor'
+     }
+     ```
+
+4. **Local Development**
+   - When developing locally, use a development server (as described above)
+   - Local development servers typically don't have CORS restrictions
+
+### Security Considerations
+
+- When using a CORS proxy, be cautious with sensitive data
+- Never expose your API keys in client-side code
+- Consider implementing token encryption
+- Use environment variables for sensitive data when possible 
