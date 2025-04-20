@@ -2,6 +2,8 @@
 
 A powerful web-based tool for streaming and processing HTML content using AI capabilities. This application allows you to analyze and modify web content efficiently using advanced language models through the OpenRouter API.
 
+🌐 **Live Demo**: [https://rolsite.github.io/deepsiteeditor](https://rolsite.github.io/deepsiteeditor)
+
 ## ⭐ Credits
 
 This project is based on [Deepsite by enzostvs](https://huggingface.co/spaces/enzostvs/deepsite), available on Hugging Face Spaces. We appreciate their original work and contribution to the open-source community.
@@ -146,36 +148,9 @@ Instead, you must use a local development server. Here are some options:
    - Run: `http-server`
    - Visit the URL shown in terminal
 
-## 🌐 Deploying to GitHub Pages
 
-You can host this application for free using GitHub Pages. Here's how:
-
-1. **Create a GitHub Repository**:
-   - Go to [GitHub](https://github.com)
-   - Click on "New repository"
-   - Name your repository `deepsiteeditor`
-   - Make it public
-   - Don't initialize with any files
-
-2. **Push Your Code**:
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/deepsiteeditor.git
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages**:
-   - Go to your repository on GitHub
-   - Click "Settings"
-   - Scroll to "GitHub Pages" section
-   - Under "Source", select "main" branch
-   - Click "Save"
-   - Wait a few minutes for deployment
-
-4. **Access Your Site**:
-   - Your site will be available at: `https://YOUR_USERNAME.github.io/deepsiteeditor`
-   - The URL will be shown in the GitHub Pages section
-
-**Note**: Make sure your OpenRouter API key is kept secure and not committed to the repository. Users of your deployed site will need to provide their own API keys. 
+**Note**: 
+- Make sure your OpenRouter API key is kept secure and not committed to the repository
+- Users of your deployed site will need to provide their own API keys
+- MCP provides free hosting for Microsoft community projects
+- Automatic SSL certificate management is included 
